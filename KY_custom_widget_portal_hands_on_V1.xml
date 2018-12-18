@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2018-12-18 08:43:21">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>Contains my fisrt custom widget updates</description>
+<inserted/>
+<name>KY_custom_widget_portal_hands_on_V1</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>3452d6d74f31230034d522788310c764</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2018-12-18 08:43:20</sys_created_on>
+<sys_id>8b0729404f22230034d522788310c7ab</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2018-12-18 08:43:20</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>DELETE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sp_instance_ed7970f24f35a30034d522788310c7f9</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="DELETE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;f079f4764f35a30034d522788310c71c&lt;/sp_column&gt;&lt;sp_widget display_value="Copy of SC Category Page"&gt;e65874be4ff1a30034d522788310c713&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2018-11-19 11:40:23&lt;/sys_created_on&gt;&lt;sys_id&gt;ed7970f24f35a30034d522788310c7f9&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_ed7970f24f35a30034d522788310c7f9&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2018-11-19 11:41:37&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"click_event_name": {
+		"value": "",
+		"displayValue": ""
+	},
+	"limit_item": {
+		"value": null,
+		"displayValue": ""
+	},
+	"show_items_from_child": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=ed7970f24f35a30034d522788310c7f9"/&gt;&lt;/record_update&gt;</payload>
+<payload_hash>2055406430</payload_hash>
+<remote_update_set display_value="KY_custom_widget_portal_hands_on_V1">8b0729404f22230034d522788310c7ab</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2018-12-18 08:43:21</sys_created_on>
+<sys_id>0b0729404f22230034d522788310c7ac</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>167355ec1b00000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2018-12-18 08:43:21</sys_updated_on>
+<table/>
+<target_name/>
+<type>Instance</type>
+<update_domain>global</update_domain>
+<update_guid>e9cf1edfd6312300dcaf46756c7b861f</update_guid>
+<update_guid_history>e9cf1edfd6312300dcaf46756c7b861f:2055406430,a7b9f476d635a300186df227e5508dc5:1758831314,a97970f22c35a3003cd00210624920fb:-1422286852</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sp_widget_4ef29ed74f31230034d522788310c7a9</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function($scope, spUtil, $http) {
+  /* widget controller */
+  var c = this;
+	$scope.orderField = "number";
+	$scope.changeSort = function(field){
+		if($scope.orderField == field){
+			$scope.orderReverse= !$scope.orderReverse; 
+		}
+		else{
+				$scope.orderField = field;
+		}
+	
+	}
+	
+	$scope.edit = function(instance){
+		$scope.editingRecord = angular.copy(instance);
+	}
+	$scope.reset = function(instance){
+		$scope.editingRecord = null;
+	}
+	$scope.save = function(instance){
+		console.log("KY::in save with "+$scope.editingRecord.sys_id);
+		$scope.writeIncident($scope.editingRecord, {'short_description':$scope.editingRecord.short_descritpion})
+		$scope.reset();
+	}
+	$scope.writeIncident = function(sys_id, data){
+		console.log("KY::In write with "+sys_id);
+		console.log(data);
+		$http({
+			method:'PUT',
+			url: '/api/now/table/incident/'+sys_id,
+			headers: {'Content-Type':'application/json'},
+			data:data
+		});
+	};
+	$scope.getPriorityClass = function(incident){
+		return "Priority"+incident.priority;
+	}
+	spUtil.recordWatch($scope, "incident", "", function(name, data){
+		spUtil.update($scope);
+	});
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;table, th,td {
+border : 1px solid blue;
+  padding : 5px;
+}
+button{
+  background-color :#4CAF50;
+  border: 1px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration:none;
+  display: inline-block;
+  border-radius:25px;
+    
+}
+.Priority1{
+background-color :red;
+}
+.Priority2{
+background-color :orange;
+}
+.Priority3{
+background-color :yellow;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;ky_incidents_list&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link/&gt;&lt;name&gt;incidents list&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+data.incidents =[];
+	
+	var inc = new GlideRecord('incident');
+	inc.addActiveQuery();
+	inc.setLimit(10);
+	inc.orderByDesc('sys_update_on');
+	inc.query();
+	while(inc.next()){
+		var tmp_inc = {};
+		tmp_inc.number = inc.getDisplayValue('number');
+		tmp_inc.short_description = inc.getDisplayValue('short_description');
+		tmp_inc.sys_id =inc.getUniqueValue();
+		tmp_inc.sys_updated_on =inc.getValue('sys_updated_on');
+		tmp_inc.priority = inc.getValue('priority');
+		data.incidents.push(tmp_inc);
+	}
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2018-11-21 07:29:08&lt;/sys_created_on&gt;&lt;sys_id&gt;4ef29ed74f31230034d522788310c7a9&lt;/sys_id&gt;&lt;sys_mod_count&gt;43&lt;/sys_mod_count&gt;&lt;sys_name&gt;incidents list&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_4ef29ed74f31230034d522788310c7a9&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2018-11-21 12:06:38&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div&gt;
+&lt;!-- your widget template --&gt;
+  &lt;p&gt;
+    This is my first custom widget
+  &lt;/p&gt;
+  &lt;div&gt;
+    &lt;label&gt;Search&lt;/label&gt;&lt;input type = "text" ng-model="searchText"&gt;&lt;/input&gt;
+  &lt;/div&gt;
+  &lt;table&gt;
+    &lt;pre&gt;Editing= {{editingRecord.sys_id}}&lt;/pre&gt;
+    &lt;pre&gt;Sort By = {{orderField}}&lt;/pre&gt;
+    &lt;tr&gt;&lt;th&gt;&lt;button ng-click= "changeSort('number')"&gt;Number&lt;/button&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;button ng-click= "changeSort('short_description')"&gt;Short Description&lt;/button&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;button ng-click= "changeSort('sys_updated_on')"&gt;Updated&lt;/button&gt;&lt;/th&gt;
+      &lt;th&gt;Actions&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr ng-repeat = "incident in data.incidents | orderBy:orderField:orderReverse |filter:searchText"&gt;
+    &lt;td ng-class="getPriorityClass(incident)"&gt;{{incident.number}}&lt;/td&gt;
+      &lt;td ng-if= "incident.sys_id==editingRecord.sys_id"&gt;&lt;input type="text" ng-model="editingRecord.short_description"&gt;&lt;/td&gt;
+    &lt;td ng-if= "incident.sys_id!=editingRecord.sys_id"&gt;{{incident.short_description}}&lt;/td&gt;
+    &lt;td&gt;{{incident.sys_updated_on}}&lt;/td&gt;
+      &lt;td ng-if= "incident.sys_id!=editingRecord.sys_id"&gt;&lt;button ng-click="edit(incident)"&gt;Edit&lt;/button&gt;&lt;/td&gt;
+     &lt;td ng-if= "incident.sys_id==editingRecord.sys_id"&gt;
+      &lt;button ng-click="save(incident)"&gt;Save&lt;/button&gt;
+      &lt;button ng-click="reset()"&gt;Reset&lt;/button&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+   
+   
+  &lt;/table&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+<payload_hash>832922278</payload_hash>
+<remote_update_set display_value="KY_custom_widget_portal_hands_on_V1">8b0729404f22230034d522788310c7ab</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2018-12-18 08:43:21</sys_created_on>
+<sys_id>8f0729404f22230034d522788310c7ac</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>167362a42020000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2018-12-18 08:43:21</sys_updated_on>
+<table/>
+<target_name>incidents list</target_name>
+<type>Widget</type>
+<update_domain>global</update_domain>
+<update_guid>75a2531f5eb123004ce8146e4be47c85</update_guid>
+<update_guid_history>75a2531f5eb123004ce8146e4be47c85:832922278,c3725b9b01b12300d2ade79f0116ee5e:896757022,8612971f67b1230023bca957243f475c:929550786,1502dbdf3c712300b3a3cafe37e7b1a7:606394096,60d1575b00b1230037dd5bab7d76f2c2:1882945686,4e911bd3e0b12300beaccd9d2720a0a7:-1255219822,eb6097dbceb123007255e2d005af0922:1768198198,07cf8b17f1b1230087f459bc3b074f29:1374208698,0f5f0b1783b12300e5e1349c111ec604:1285290281,070f4b9b9cb12300cbf249c7870b0a4d:-1548348224,14ad439360b12300d653ac57d1f01a24:295008444,75644fdf147123003f449970ea010803:-268293694,8f630317a8b12300a0b5446bcbc230bf:-103541064,d6820bd3c6b12300d1c2182bfb960964:1548097934,1bef329312b12300f685d9202bed8bd4:-1116516885,326f3edf38712300b737a5de42b8c6fc:-1422476780,a2be76534db123005c7f67b6c190ccf0:-1709924333,22fb365b2f712300fd68209b7cdce040:49935347,0edbfadfb771230072e0da1d206a3286:1833229108,081f6ed7b0712300a5efe81b3801a9a7:663137385,612eeed70471230000120db9d882a3df:740114951,4aed6ed7f271230056996ba95fabef97:-1910977930,5aacaa17aa712300f874a315e4c4ae90:495593672,ec8caa17a87123003e2c7c2968261eb2:263398086,1b6caa17437123001467ee8f0fa6aa81:-733885492,474c2a136f7123009724c12dda86acb5:1005639691,26b862134571230073bdbec4514b1531:-399924130,3398e61744712300587110559e6d90c6:400804545,7d2d129f983123002a7e61de17d7ea67:-1052950102,f1fc5e5fa0312300491f0ab9d8090d2f:1034564609,28fcd25f28312300b05bf4950ec46f91:-775029366,ca0b96dbb93123006011e16bfb4bf32d:1034564609,f6699edbc6312300251819cafd880810:-2070519937,34989e5b833123001c71b451d9049213:477383434,d37856db0831230026b82b4953fae3de:-2003712754,796856dba63123005ee5bdfb475e7112:-494171307,4d081a9b6831230009bb98f928931308:1996424273,bbb79e9b56312300e47f7b9435be25b9:-391504003,5827129bb331230039ecb65992ff748c:-598230726,61071a9ba8312300e7b05bc75e2a5001:804587720,88465ed729312300614da5394140be3b:-1254384249,b1f5ded766312300c76feb6b06b2c645:827673311,f9e5121bad312300d6139ee44d988909:845748795,7023ded70d31230028f1e59eef4b2198:-537944391</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sp_portal_60177ce24ff9630034d522788310c71f</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_portal"&gt;&lt;sp_portal action="INSERT_OR_UPDATE"&gt;&lt;css_variables&gt;$grid-gutter-width: 15px !default;&lt;/css_variables&gt;&lt;default&gt;false&lt;/default&gt;&lt;homepage display_value="it_home"&gt;5f887c364f35a30034d522788310c7a4&lt;/homepage&gt;&lt;icon/&gt;&lt;kb_knowledge_base display_value="IT"&gt;a7e8a78bff0221009b20ffffffffff17&lt;/kb_knowledge_base&gt;&lt;kb_knowledge_page display_value="kb_view2"&gt;26c2e030d7201200a9addd173e24d437&lt;/kb_knowledge_page&gt;&lt;login_page display_value="landing"&gt;36c61807cb31120000f8d856634c9ca9&lt;/login_page&gt;&lt;logo/&gt;&lt;notfound_page display_value="404"&gt;3c2c9063cb11020000f8d856634c9c1f&lt;/notfound_page&gt;&lt;quick_start_config&gt;&lt;![CDATA[[{
+	"tagline": {
+		"table" : "sp_instance",
+		"sys_id" : "34fe3d96cb20020000f8d856634c9cf4",
+		"field" : "title"
+	},
+	"hero_background": {
+		"table" : "sp_container",
+		"sys_id" : "be98a8d2cb20020000f8d856634c9c63",
+		"field" : "background_image"
+	},
+	"readonly_variable_editor": "false"
+}]]]&gt;&lt;/quick_start_config&gt;&lt;sc_catalog display_value="Service Catalog"&gt;e0d08b13c3330100c8b837659bba8fb4&lt;/sc_catalog&gt;&lt;sc_catalog_page/&gt;&lt;sc_category_page/&gt;&lt;sp_chat_queue/&gt;&lt;sp_rectangle_menu display_value="SP Header Menu"&gt;d150fd31cb10020000f8d856634c9ce6&lt;/sp_rectangle_menu&gt;&lt;sqanda_knowledge_base/&gt;&lt;sys_class_name&gt;sp_portal&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2018-11-18 16:51:27&lt;/sys_created_on&gt;&lt;sys_id&gt;60177ce24ff9630034d522788310c71f&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;ITSM Portal &lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_portal_60177ce24ff9630034d522788310c71f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2018-11-21 07:26:33&lt;/sys_updated_on&gt;&lt;theme display_value="Stock"&gt;79315153cb33310000f8d856634c9c4b&lt;/theme&gt;&lt;title&gt;ITSM Portal &lt;/title&gt;&lt;url_suffix&gt;itsp&lt;/url_suffix&gt;&lt;/sp_portal&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=60177ce24ff9630034d522788310c71f"/&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-968879518</payload_hash>
+<remote_update_set display_value="KY_custom_widget_portal_hands_on_V1">8b0729404f22230034d522788310c7ab</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2018-12-18 08:43:21</sys_created_on>
+<sys_id>cb0729404f22230034d522788310c7ac</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1673529d8070000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2018-12-18 08:43:21</sys_updated_on>
+<table/>
+<target_name>ITSM Portal </target_name>
+<type>Service Portal</type>
+<update_domain>global</update_domain>
+<update_guid>07829297683123004b369d36540b8d3a</update_guid>
+<update_guid_history>07829297683123004b369d36540b8d3a:-968879518,63a8fc362235a300803c2ea21e86b125:-1152228801,e8177ce2edf963003abf4cf02ccc1a21:-1969645987</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sp_instance_53cf169f4f31230034d522788310c7f3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="1">f079f4764f35a30034d522788310c71c</sp_column><sp_widget display_value="incidents list">4ef29ed74f31230034d522788310c7a9</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2018-11-21 08:24:28</sys_created_on><sys_id>53cf169f4f31230034d522788310c7f3</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sp_instance_53cf169f4f31230034d522788310c7f3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2018-11-21 08:24:28</sys_updated_on><title/><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=53cf169f4f31230034d522788310c7f3"/></record_update>]]></payload>
+<payload_hash>460443610</payload_hash>
+<remote_update_set display_value="KY_custom_widget_portal_hands_on_V1">8b0729404f22230034d522788310c7ab</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2018-12-18 08:43:20</sys_created_on>
+<sys_id>cf0729404f22230034d522788310c7ab</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>167355edb500000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2018-12-18 08:43:20</sys_updated_on>
+<table/>
+<target_name/>
+<type>Instance</type>
+<update_domain>global</update_domain>
+<update_guid>dbcf169f0f3123004936b30f58fc1df4</update_guid>
+<update_guid_history>dbcf169f0f3123004936b30f58fc1df4:460443610</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
